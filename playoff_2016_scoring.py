@@ -59,20 +59,21 @@ def team_results(db, teams, point_key):
 def total_points(results):
     return({team_name:sum([player['fantasy'] for player in team]) for team_name, team in results.iteritems()})
 
-def add_points_to_teams(db, teams, point_key):
+def add_points_to_teams(db, teams, point_key, write_stats=True):
     results = team_results(db, teams, point_key)
+    write_json(results, write_dir='stats')
     for team in teams.keys():
         for i in range(len(teams[team])):
             teams[team][i].update({'points':results[team][i]['fantasy']})
 
-def write_teams(teams, write_dir = 'updates_2016', write_current = True):
+def write_json(obj, write_dir='.', write_current = True):
     if write_current:
         with open(write_dir + '/current.json', 'w') as f:
-            json.dump(teams,f)
+            json.dump(obj,f)
     
     time_str = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
     with open(write_dir + '/' + time_str + '.json', 'w') as f:
-        json.dump(teams,f)
+        json.dump(obj,f)
 
 def main(season_year):
     db = nfldb.connect()
@@ -89,7 +90,7 @@ def main(season_year):
 
     add_points_to_teams(db, teams, point_key)
 
-    write_teams(teams, write_dir='updates_'+str(season_year+1))
+    write_json(teams, write_dir='teams_'+str(season_year+1))
 
 
 if __name__ == "__main__":
