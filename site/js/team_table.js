@@ -29,7 +29,7 @@ function json2tables(json_url, div_id, col_config){
 				tbl_body += "<tr>"+tbl_row+'</tr>'
 			})
 			total_row = '<tr><td>Total:</td><td>'+String(fpoints.toFixed(1))+"</td></tr>"
-			tbl_body += total_row
+			tbl_body = total_row + tbl_body
 			//console.log(tbl_head)
 			//console.log(tbl_body)
 
