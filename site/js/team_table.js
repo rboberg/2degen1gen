@@ -9,15 +9,13 @@ function json2tables(json_url, div_id, col_config){
 			var cols = Object.keys(team[0])
 			var fpoints = 0;
 
-			
-
+			// Header
 			$.each(cols, function(i, col){
 				tbl_head += '<th>'+col+'</th>'
 			})
 			tbl_head += '</tr>'
 
-			
-
+			// Table
 			$.each(team, function(){
 				var tbl_row = '';
 				var row = this;
@@ -31,7 +29,8 @@ function json2tables(json_url, div_id, col_config){
 				tbl_body += "<tr>"+tbl_row+'</tr>'
 			})
 
-			var tbl_title = '<tr><th colspan='+String(cols.length)+'>'+team_name+" "+String(fpoints.toFixed(1))+" Points</th></tr>"
+			// Add points to Header
+			var tbl_title = '<tr><th colspan='+String(cols.length)+'>'+team_name+" | "+String(fpoints.toFixed(1))+" Points</th></tr>"
 			tbl_head = tbl_title + tbl_head
 
 			//total_row = '<tr><td>Total:</td><td>'+String(fpoints.toFixed(1))+"</td></tr>"
