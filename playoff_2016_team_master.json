@@ -1,0 +1,44 @@
+{
+	"Boberg":[
+		{"position" : "QB", "full_name" : "Russell Wilson", "team" : "SEA"},
+		{"position" : "QB", "full_name" : "Carson Palmer", "team" : "ARI"},
+		{"position" : "RB", "full_name" : "Jonathan Stewart", "team" : "CAR"},
+		{"position" : "RB", "full_name" : "Charcandrick West", "team" : "KC"},
+		{"position" : "RB", "full_name" : "Adrian Peterson", "team" : "MIN"},
+		{"position" : "RB", "full_name" : "Eddie Lacy", "team" : "GB"},
+		{"position" : "WR", "full_name" : "Antonio Brown", "team" : "PIT"},
+		{"position" : "WR", "full_name" : "A.J. Green", "team" : "CIN"},
+		{"position" : "WR", "full_name" : "Demaryius Thomas", "team" : "DEN"},
+		{"position" : "WR", "full_name" : "DeAndre Hopkins", "team" : "HOU"},
+		{"position" : "TE", "full_name" : "Jordan Reed", "team" : "WAS"},
+		{"position" : "TE", "full_name" : "Rob Gronkowski", "team" : "NE"}
+	],
+	"Verbuch":[
+		{"position" : "QB", "full_name" : "Tom Brady", "team" : "NE"},
+		{"position" : "QB", "full_name" : "Cam Newton", "team" : "CAR"},
+		{"position" : "RB", "full_name" : "David Johnson", "team" : "ARI"},
+		{"position" : "RB", "full_name" : "Marshawn Lynch", "team" : "SEA"},
+		{"position" : "RB", "full_name" : "Adrian Peterson", "team" : "MIN"},
+		{"position" : "RB", "full_name" : "Eddie Lacy", "team" : "GB"},
+		{"position" : "WR", "full_name" : "Antonio Brown", "team" : "PIT"},
+		{"position" : "WR", "full_name" : "Jeremy Maclin", "team" : "KC"},
+		{"position" : "WR", "full_name" : "Demaryius Thomas", "team" : "DEN"},
+		{"position" : "WR", "full_name" : "DeAndre Hopkins", "team" : "HOU"},
+		{"position" : "TE", "full_name" : "Jordan Reed", "team" : "WAS"},
+		{"position" : "TE", "full_name" : "Tyler Eifert", "team" : "CIN"}
+	],
+	"Guth":[
+		{"position" : "QB", "full_name" : "Tom Brady", "team" : "NE"},
+		{"position" : "QB", "full_name" : "Carson Palmer", "team" : "ARI"},
+		{"position" : "RB", "full_name" : "Jonathan Stewart", "team" : "CAR"},
+		{"position" : "RB", "full_name" : "Charcandrick West", "team" : "KC"},
+		{"position" : "RB", "full_name" : "Adrian Peterson", "team" : "MIN"},
+		{"position" : "RB", "full_name" : "Eddie Lacy", "team" : "GB"},
+		{"position" : "WR", "full_name" : "Antonio Brown", "team" : "PIT"},
+		{"position" : "WR", "full_name" : "Doug Baldwin", "team" : "SEA"},
+		{"position" : "WR", "full_name" : "Demaryius Thomas", "team" : "DEN"},
+		{"position" : "WR", "full_name" : "DeAndre Hopkins", "team" : "HOU"},
+		{"position" : "TE", "full_name" : "Jordan Reed", "team" : "WAS"},
+		{"position" : "TE", "full_name" : "Tyler Eifert", "team" : "CIN"}
+	]
+}

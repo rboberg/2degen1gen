@@ -1,0 +1,13 @@
+{
+	"passing_yds" : 0.04,
+	"passing_tds" : 4,
+	"passing_int" : -2,
+	"fumbles_lost" : -2,
+	"rushing_yds" : 0.1,
+	"rushing_tds" : 6,
+	"receiving_yds" : 0.1,
+	"receiving_tds" : 6,
+	"receiving_twoptm" : 2,
+	"rushing_twoptm" : 2,
+	"passing_twoptm" : 2
+}
