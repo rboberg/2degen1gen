@@ -59,21 +59,27 @@ def team_results(db, teams, point_key):
 def total_points(results):
     return({team_name:sum([player['fantasy'] for player in team]) for team_name, team in results.iteritems()})
 
-def add_points_to_teams(db, teams, point_key, write_stats=True):
+def add_points_to_teams(db, teams, point_key, write_stats=True, write_time=False):
     results = team_results(db, teams, point_key)
-    write_json(results, write_dir='stats')
+    if write_stats:
+        write_json(results, write_dir='stats', write_time=write_time)
     for team in teams.keys():
         for i in range(len(teams[team])):
             teams[team][i].update({'points':results[team][i]['fantasy']})
 
-def write_json(obj, write_dir='.', write_current = True):
+def write_json(obj, write_dir='.', write_current = True, write_time = True):
+    time_str = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+
     if write_current:
         with open(write_dir + '/current.json', 'w') as f:
             json.dump(obj,f)
+
+        with open(write_dir + '/current_time.txt', 'w+') as f:
+            f.write(time_str)
     
-    time_str = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
-    with open(write_dir + '/' + time_str + '.json', 'w') as f:
-        json.dump(obj,f)
+    if write_time:
+        with open(write_dir + '/' + time_str + '.json', 'w') as f:
+            json.dump(obj,f)
 
 def main(season_year):
     db = nfldb.connect()
@@ -88,9 +94,9 @@ def main(season_year):
     with open(point_file) as f:    
         point_key = json.load(f)
 
-    add_points_to_teams(db, teams, point_key)
+    add_points_to_teams(db, teams, point_key, write_time=False)
 
-    write_json(teams, write_dir='teams_'+str(season_year+1))
+    write_json(teams, write_dir='teams_'+str(season_year+1), write_time=False)
 
 
 if __name__ == "__main__":

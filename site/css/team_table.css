@@ -23,3 +23,10 @@ table{
 	float:left;
 	margin-left: 10px;
 }
+
+#update_time{
+  font-size: 9px;
+  color: gray;
+  margin-bottom: 5px;
+  margin-left:5px;
+}

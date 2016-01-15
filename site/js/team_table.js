@@ -1,4 +1,10 @@
 
+function score_time(time_url){
+	$.get(time_url, function(data){
+		$('#update_time').html("Last Update: " + data)
+	})
+}
+
 function json2tables(json_url, div_id, col_config){
 	$.getJSON(json_url, function(data) {
 		teams = Object.keys(data)
@@ -45,3 +51,5 @@ function json2tables(json_url, div_id, col_config){
 }
 
 json2tables('../teams_2016/current.json', 'tables')
+
+score_time('../teams_2016/current_time.txt')
